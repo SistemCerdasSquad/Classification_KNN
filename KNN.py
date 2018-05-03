@@ -1,10 +1,4 @@
-
-# coding: utf-8
-
 # # Load Dataset
-
-# In[ ]:
-
 import pandas as pd
 
 df = pd.read_csv('data.csv',header=None)
@@ -12,9 +6,6 @@ print(df)
 
 
 # # Preprocessing
-
-# In[ ]:
-
 X = []
 y = []
 for (value,label) in zip(df[1],df[2]):
@@ -23,9 +14,6 @@ for (value,label) in zip(df[1],df[2]):
 
 
 # # Create Model
-
-# In[ ]:
-
 from sklearn.neighbors import KNeighborsClassifier
 
 n_neighbors = 3
@@ -36,9 +24,6 @@ clf.fit(X,y)
 
 
 # # Testing Model
-
-# In[ ]:
-
 datatest = pd.read_csv('testing.csv',header=None)
 
 for (laptop,harga) in zip(datatest[0],datatest[1]):
